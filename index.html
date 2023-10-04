@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./logo.ico" type="image/x-icon" />
+    <title>google_sheet</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- create menu container -->
+    <div id="nav">
+      <li>File</li>
+      <li>Home</li>
+      <li>Insert</li>
+      <li>Layout</li>
+      <li>Help</li>
+    </div>
+    <div id="menu-container">
+      <select name="" id="font-family" class="menu-icons">
+        <option value="Times New Roman">Times_New_Roman</option>
+        <option value="monospace">monospace</option>
+        <option value="sans-serif">sans-serif</option>
+        <option value="cursive">cursive</option>
+      </select>
+      <input id="font-size-input" type="text" placeholder="font-size" />
+      <img id="bold" class="menu-icons" src="./menu-icons/bold.svg" alt="" />
+      <img
+        id="italic"
+        class="menu-icons"
+        src="./menu-icons/italic.svg"
+        alt=""
+      />
+      <img
+        id="underlined"
+        class="menu-icons"
+        src="./menu-icons/underlined.svg"
+        alt=""
+      />
+      <img id="left" class="menu-icons" src="./menu-icons/align-left.svg" alt=/>
+      <img
+        id="center"
+        class="menu-icons"
+        src="./menu-icons/align-center.svg"
+        alt=""
+      />
+      <img
+        id="right"
+        class="menu-icons"
+        src="./menu-icons/align-right.svg"
+        alt=""
+      />
+      <label for="font-color"
+        ><img
+          id="ifontcolor"
+          class="menu-icons"
+          src="./menu-icons/text-color.svg"
+          alt=""
+      /></label>
+      <input
+        id="font-color"
+        class="menu-icons"
+        style="display: none"
+        type="color"
+      />
+      <label for="bg-color"
+        ><img
+          id="ibgcolor"
+          class="menu-icons"
+          src="./menu-icons/bg-color.svg"
+          alt=""
+      /></label>
+      <input type="color" style="display: none" name="" id="bg-color" />
+    </div>
+    <div id="display-cell"></div>
+    <!-- create column rows structure using flexbox -->
+    <div id="sheet-container"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
