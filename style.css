@@ -53,6 +53,10 @@ body{
     display: none;
 }
 
+#copy,#paste{
+    cursor: pointer;
+}
+
 #sheet-add{
     font-size: 25px;
     font-weight: bold;

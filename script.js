@@ -213,7 +213,7 @@ function removeSelected(element) {
 }
 
 const functionInput = document.querySelector("#function-container>div>input");
-console.log(functionInput);
+// console.log(functionInput);
 functionInput.addEventListener("keyup", (e) => {
   if (!activeCell) {
     alert("Please select a cell then write");
@@ -237,4 +237,18 @@ addButton.addEventListener("click", (e) => {
   p.innerText = `sheet ${count}`;
   footer.appendChild(p);
   count++;
+});
+
+let copyfrom;
+const copyButton = document.getElementById("copy");
+copyButton.addEventListener("click", (e) => {
+  copyfrom = activeCell;
+  navigator.clipboard.writeText(activeCell.innerText);
+  activeCell.style.backgroundColor = "lightblue";
+});
+
+const pasteButton = document.getElementById("paste");
+pasteButton.addEventListener("click", async (e) => {
+  activeCell.innerText = await navigator.clipboard.readText();
+  copyfrom.style.backgroundColor = "#ecf0f1";
 });
