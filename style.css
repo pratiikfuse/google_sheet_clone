@@ -14,8 +14,53 @@ body{
     overflow-x: scroll;
 
 }
+
+
+#function-container{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 10px;
+}
+
+#function-container>div>label{
+    font-family: cursive;
+}
+
+#function-container>div>input{
+    width: 500px;
+    height: 20px;
+    border: none;
+}
+
+#footer{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    padding-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    background-color: aquamarine;
+    /* background-color: aliceblue; */
+}
+
+
 #sheet-container::-webkit-scrollbar{
     display: none;
+}
+
+#sheet-add{
+    font-size: 25px;
+    font-weight: bold;
+   
+}
+
+#footer >P {
+    cursor: pointer;
 }
 
 .cell{
@@ -92,8 +137,6 @@ display: flex;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-    margin-left: 10px;
 }
 
 #nav{

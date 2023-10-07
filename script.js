@@ -69,6 +69,8 @@ function cellFocus(e) {
     alignMent: style.textAlign,
     fontSize: style.fontSize,
     fontFamily: style.fontFamily,
+    fontColor: style.color,
+    bgColor: style.backgroundColor,
   };
 
   loadMenuStyles(activeCellStatus);
@@ -155,6 +157,8 @@ function italicStyling(e) {
 }
 
 function loadMenuStyles(activeCellStatus) {
+  // console.log(activeCellStatus.fontColor);
+  // console.log(activeCellStatus.bgColor);
   fonSizeInput.value = activeCellStatus.fontSize;
   if (activeCellStatus.isBold) {
     addSelected(boldButton);
@@ -207,3 +211,30 @@ function addSelected(element) {
 function removeSelected(element) {
   element.classList.remove("selected");
 }
+
+const functionInput = document.querySelector("#function-container>div>input");
+console.log(functionInput);
+functionInput.addEventListener("keyup", (e) => {
+  if (!activeCell) {
+    alert("Please select a cell then write");
+    return;
+  }
+
+  activeCell.innerText = e.target.value;
+  // console.log(e.target.value);
+});
+
+let addButton = document.getElementById("sheet-add");
+const footer = document.getElementById("footer");
+let count = 2;
+addButton.addEventListener("click", (e) => {
+  let p = document.createElement("p");
+  p.addEventListener("mouseup", (e) => {
+    if (e.button == 2) {
+      e.target.remove();
+    }
+  });
+  p.innerText = `sheet ${count}`;
+  footer.appendChild(p);
+  count++;
+});
